@@ -77,9 +77,9 @@ export default function FAQsSection() {
                 When will the Cloud version be available?
               </h3>
               <p className="text-muted-foreground mt-4">
-                We're currently focused on perfecting the open source version.
+                We&apos;re currently focused on perfecting the open source version.
                 The managed Cloud offering is planned for the future, but we
-                don't have a specific timeline yet. Follow our GitHub repository
+                don&apos;t have a specific timeline yet. Follow our GitHub repository
                 for updates on development progress.
               </p>
             </div>

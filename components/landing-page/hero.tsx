@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { useState, useTransition } from "react";
 
 export default function HeroSection() {
-  const [isPending, startTransition] = useTransition();
+  const [isPending] = useTransition();
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (formData: FormData) => {
