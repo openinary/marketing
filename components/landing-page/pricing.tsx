@@ -42,7 +42,7 @@ export default function PricingSection() {
               <ul className="list-outside space-y-3 text-sm">
                 {[
                   "Upload media via API",
-                  "Works standalone or with S3-compatible storage",
+                  "Works with any S3-compatible storage",
                   "Transform images and videos on-the-fly via URL",
                   "UI for uploads + previews",
                   "MIT License - Use freely",

@@ -21,21 +21,21 @@ export default function FAQsSection() {
               </h3>
               <p className="text-muted-foreground mt-4">
                 Openinary is fully Dockerized and can be deployed on any infrastructure.
-                No external dependencies required - it works standalone or with S3-compatible storage for optimization.
+                No external dependencies required - it works with any S3-compatible storage.
               </p>
 
               <ol className="list-outside list-decimal space-y-2 pl-4">
                 <li className="text-muted-foreground mt-4">
-                  Clone the repository and configure environment variables
+                  Clone the repository and configure environment variables.
                 </li>
                 <li className="text-muted-foreground mt-4">
-                  Run docker-compose up or deploy to your preferred container platform
+                  Run docker-compose up or deploy to your preferred container platform.
                 </li>
                 <li className="text-muted-foreground mt-4">
-                  Optionally configure S3-compatible storage (like Cloudflare R2) for enhanced performance - detailed instructions in our{" "}
-                  <Link target="_blank" className="hover:underline" href="#">
+                  Configure S3-compatible storage (like Cloudflare R2) - detailed instructions in our{" "}
+                  <Link target="_blank" className="underline" href="https://docs.openinary.dev/configuration">
                     documentation
-                  </Link>
+                  </Link>.
                 </li>
               </ol>
             </div>
@@ -68,7 +68,7 @@ export default function FAQsSection() {
                   No usage limits beyond what you configure
                 </li>
                 <li className="text-muted-foreground">
-                  Transparent, MIT-licensed codebase you can modify
+                  Transparent, MIT-licensed codebase you can modify/contribute to
                 </li>
               </ul>
             </div>
@@ -77,10 +77,10 @@ export default function FAQsSection() {
                 When will the Cloud version be available?
               </h3>
               <p className="text-muted-foreground mt-4">
-                We&apos;re currently focused on perfecting the open source version.
+                We&apos;re currently focused on adding features to the open source version.
                 The managed Cloud offering is planned for the future, but we
-                don&apos;t have a specific timeline yet. Follow our GitHub repository
-                for updates on development progress.
+                don&apos;t have a specific timeline yet. <Link target="_blank" className="underline" href="https://github.com/openinary/openinary/commits/main/">Follow our GitHub repository
+                </Link> for updates on development progress.
               </p>
             </div>
             <div className="py-6">

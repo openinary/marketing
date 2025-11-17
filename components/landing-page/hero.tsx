@@ -3,13 +3,39 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useTransition } from "react";
+import { toast } from "sonner";
+import confetti from "canvas-confetti";
+import { submitWaitlist } from "@/app/actions/waitlist";
 
 export default function HeroSection() {
-  const [isPending] = useTransition();
+  
+  const [isPending, startTransition] = useTransition();
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (formData: FormData) => {
-    console.log(formData);
+    startTransition(async () => {
+      const result = await submitWaitlist(formData);
+      
+      if (result.success) {
+        // Show success toast
+        toast.success("Successfully joined the waitlist!", {
+          description: "We'll notify you when we launch.",
+        });
+        
+        // Trigger confetti
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
+        
+        // Clear email input
+        setEmail("");
+      } else {
+        // Show error toast with the validation message
+        toast.error(result.error || "Something went wrong");
+      }
+    });
   };
 
   return (
