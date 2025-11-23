@@ -19,7 +19,7 @@ export default function HeroSection() {
       if (result.success) {
         // Show success toast
         toast.success("Successfully joined the waitlist!", {
-          description: "We'll notify you when we launch.",
+          description: "You'll receive updates on the open-source project and cloud solution.",
         });
         
         // Trigger confetti
@@ -49,23 +49,33 @@ export default function HeroSection() {
             The Open Source Media Cloud. Fast, cheap, and open.
           </p>
         </div>
-        <div className="flex gap-4">
-          <form action={handleSubmit} className="flex gap-1">
-            <Input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your email"
-              className="h-full w-56 text-sm"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              disabled={isPending}
-            />
-            <Button type="submit" size="sm" disabled={isPending}>
-              {isPending ? "Joining..." : "Join the waitlist"}
-            </Button>
+        <div className="flex flex-col gap-2 scroll-mt-[100px]" id="waitlist">
+          <form action={handleSubmit} className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1">
+              <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                Email address
+              </label>
+              <div className="flex gap-1">
+                <Input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your.email@example.com"
+                  className="h-8 w-56 text-sm"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  disabled={isPending}
+                />
+                <Button type="submit" size="sm" disabled={isPending}>
+                  {isPending ? "Joining..." : "Join the waitlist"}
+                </Button>
+              </div>
+            </div>
           </form>
+          <p className="text-sm text-gray-500">
+            Get updates on open-source and cloud solutions.
+          </p>
         </div>
       </div>
     </section>

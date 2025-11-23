@@ -67,8 +67,10 @@ export default function PricingSection() {
                   </p>
                 </div>
 
-                <Button disabled className="w-full">
-                  Coming Soon
+                <Button asChild className="w-full">
+                  <Link href="#waitlist">
+                    Join the waitlist
+                  </Link>
                 </Button>
               </div>
 
