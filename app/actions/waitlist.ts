@@ -59,10 +59,53 @@ export async function submitWaitlist(formData: FormData) {
               message = "Invalid email address.";
             }
 
+            // Log the rejected email with LogSnag
+            const logsnagToken = process.env.LOGSNAG_TOKEN;
+            const logsnagProject = process.env.LOGSNAG_PROJECT || "openinary";
+            
+            if (logsnagToken) {
+              const logsnag = new LogSnag({
+                token: logsnagToken,
+                project: logsnagProject,
+              });
+              
+              await logsnag.track({
+                channel: "waitlist",
+                event: "Email Rejected",
+                user_id: email,
+                icon: "🚫",
+                description: `Email rejected: ${email}. Reason: ${emailTypes.join(", ")}. Decision ID: ${decision.id}`,
+                tags: {
+                  reason: emailTypes.join(", "),
+                },
+                notify: true,
+              });
+            }
+
             return {
               success: false,
               error: message,
             };
+          }
+
+          // Log other types of denials with LogSnag
+          const logsnagToken = process.env.LOGSNAG_TOKEN;
+          const logsnagProject = process.env.LOGSNAG_PROJECT || "openinary";
+          
+          if (logsnagToken) {
+            const logsnag = new LogSnag({
+              token: logsnagToken,
+              project: logsnagProject,
+            });
+            
+            await logsnag.track({
+              channel: "waitlist",
+              event: "Request Denied",
+              user_id: email,
+              icon: "🚫",
+              description: `Request denied for: ${email}. Decision ID: ${decision.id}`,
+              notify: true,
+            });
           }
 
           return {
