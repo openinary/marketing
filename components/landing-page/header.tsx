@@ -12,12 +12,12 @@ export default function HeroHeader() {
 
         <div className="flex items-center gap-2">
           <Link
-            href="https://cal.com/hey-florian/20-min-openinary?overlayCalendar=true"
+            href="https://docs.openinary.dev/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Button size="sm" variant="outline">
-              Book demo
+              Docs
             </Button>
           </Link>
           <Link target="_blank" href="https://github.com/openinary/openinary">
