@@ -32,8 +32,8 @@ export default function PricingSection() {
               </div>
 
               <Button asChild variant="outline" className="w-full">
-                <Link target="_blank" href="https://docs.openinary.dev/">
-                  Documentation
+                <Link target="_blank" href="https://docs.openinary.dev/quickstart">
+                  Self-host with Docker
                 </Link>
               </Button>
 
@@ -45,7 +45,6 @@ export default function PricingSection() {
                   "Works with any S3-compatible storage",
                   "Transform images and videos on-the-fly via URL",
                   "UI for uploads + previews",
-                  "MIT License - Use freely",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <Check className="size-3" />
@@ -53,6 +52,13 @@ export default function PricingSection() {
                   </li>
                 ))}
               </ul>
+              
+              <div className="mt-4 p-3 bg-neutral-50 rounded border">
+                <p className="text-sm font-semibold">MIT License</p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Use freely, modify, and distribute
+                </p>
+              </div>
             </div>
           </div>
 
@@ -67,7 +73,7 @@ export default function PricingSection() {
                   </p>
                 </div>
 
-                <Button asChild className="w-full">
+                <Button asChild variant="outline" className="w-full">
                   <Link href="#waitlist">
                     Join the waitlist
                   </Link>

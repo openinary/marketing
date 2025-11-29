@@ -84,23 +84,59 @@ export default function FooterSection({
 }: FooterSectionProps) {
   return (
     <footer>
-      <div className="flex justify-between items-center p-6">
-        <span className="text-muted-foreground block text-center text-sm">
-          © {new Date().getFullYear()} {companyName}, {copyrightText}
-        </span>
-        <div className=" flex justify-center gap-6 text-sm">
-          {socialLinks.map((socialLink, index) => (
-            <Link
-              key={index}
-              href={socialLink.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={socialLink.ariaLabel}
-              className="text-muted-foreground hover:text-primary block"
-            >
-              {socialLink.icon}
-            </Link>
-          ))}
+      <div className="flex flex-col gap-6 p-6">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div className="flex flex-col gap-2">
+            <span className="text-muted-foreground block text-sm">
+              © {new Date().getFullYear()} {companyName}, {copyrightText}
+            </span>
+            <p className="text-xs text-muted-foreground max-w-[500px]">
+              Open-source, self-hostable alternative to Cloudinary
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col gap-2">
+              <span className="text-xs font-semibold text-muted-foreground">Resources</span>
+              <div className="flex flex-col gap-1">
+                <Link
+                  href="/"
+                  className="text-xs text-muted-foreground hover:text-foreground"
+                >
+                  Website
+                </Link>
+                <Link
+                  href="https://docs.openinary.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted-foreground hover:text-foreground"
+                >
+                  Docs
+                </Link>
+                <Link
+                  href="https://docs.openinary.dev/quickstart"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted-foreground hover:text-foreground"
+                >
+                  Quickstart
+                </Link>
+              </div>
+            </div>
+            <div className="flex justify-center gap-6 text-sm">
+              {socialLinks.map((socialLink, index) => (
+                <Link
+                  key={index}
+                  href={socialLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={socialLink.ariaLabel}
+                  className="text-muted-foreground hover:text-primary block"
+                >
+                  {socialLink.icon}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>
