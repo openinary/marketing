@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Code2, Key, Play } from "lucide-react";
 
 const steps = [
   {
@@ -34,7 +33,7 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          {steps.map((step, index) => (
+          {steps.map((step) => (
             <div
               key={step.number}
               className="flex flex-col gap-4 p-6 border rounded-lg"

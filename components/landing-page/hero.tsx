@@ -1,45 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useState, useTransition } from "react";
-import { toast } from "sonner";
-import confetti from "canvas-confetti";
-import { submitWaitlist } from "@/app/actions/waitlist";
 import Link from "next/link";
 import { Check } from "lucide-react";
 
 export default function HeroSection() {
-  
-  const [isPending, startTransition] = useTransition();
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = async (formData: FormData) => {
-    startTransition(async () => {
-      const result = await submitWaitlist(formData);
-      
-      if (result.success) {
-        // Show success toast
-        toast.success("Successfully joined the waitlist!", {
-          description: "You'll receive updates on the open-source project and cloud solution.",
-        });
-        
-        // Trigger confetti
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { y: 0.6 },
-        });
-        
-        // Clear email input
-        setEmail("");
-      } else {
-        // Show error toast with the validation message
-        toast.error(result.error || "Something went wrong");
-      }
-    });
-  };
-
   return (
     <section className="py-8 px-6">
       <div className="flex flex-col items-start gap-8">

@@ -39,7 +39,7 @@ export default function TransformationExamplesSection() {
             Looks familiar if you know Cloudinary
           </h2>
           <p className="text-muted-foreground max-w-[600px]">
-            Same powerful URL-based transformations you're used to, but self-hosted and open-source.
+            Same powerful URL-based transformations you&apos;re used to, but self-hosted and open-source.
           </p>
         </div>
 

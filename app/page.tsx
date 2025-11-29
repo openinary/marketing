@@ -8,8 +8,6 @@ import HeroSection from "@/components/landing-page/hero";
 import HowItWorksSection from "@/components/landing-page/how-it-works";
 import PricingSection from "@/components/landing-page/pricing";
 import StorageCompatibilitySection from "@/components/landing-page/storage-compatibility";
-import TakeControlSection from "@/components/landing-page/take-control";
-import TransformationExamplesSection from "@/components/landing-page/transformation-examples";
 import WaitlistSection from "@/components/landing-page/waitlist";
 
 export default function Home() {

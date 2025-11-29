@@ -2,10 +2,8 @@
 
 import { ContainerIcon, CpuIcon, ImageIcon } from "lucide-react";
 import Image from "next/image";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 const features = [
   {
