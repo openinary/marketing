@@ -5,21 +5,18 @@ import { Code2, Key, Play } from "lucide-react";
 const steps = [
   {
     number: "1",
-    title: "Clone & Docker compose",
-    description: "Get started with a single docker-compose command",
-    icon: <Code2 className="size-6" />,
+    title: "Clone & Run",
+    description: "Get started with a single command",
   },
   {
     number: "2",
-    title: "Setup admin + API key",
-    description: "Configure your admin account and generate API keys",
-    icon: <Key className="size-6" />,
+    title: "Upload your assets",
+    description: "Through the API or the UI",
   },
   {
     number: "3",
-    title: "Call a transformation URL",
-    description: "Start transforming images and videos via URL parameters",
-    icon: <Play className="size-6" />,
+    title: "Transform your assets",
+    description: "They are now optimized for the web!",
   },
 ];
 
@@ -43,10 +40,7 @@ export default function HowItWorksSection() {
               className="flex flex-col gap-4 p-6 border rounded-lg"
             >
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg border bg-neutral-50">
-                  {step.icon}
-                </div>
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
+                <div className="flex h-8 w-8 items-center justify-center bg-primary text-primary-foreground text-sm font-bold">
                   {step.number}
                 </div>
               </div>

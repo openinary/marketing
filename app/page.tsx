@@ -10,6 +10,7 @@ import PricingSection from "@/components/landing-page/pricing";
 import StorageCompatibilitySection from "@/components/landing-page/storage-compatibility";
 import TakeControlSection from "@/components/landing-page/take-control";
 import TransformationExamplesSection from "@/components/landing-page/transformation-examples";
+import WaitlistSection from "@/components/landing-page/waitlist";
 
 export default function Home() {
   return (
@@ -24,14 +25,12 @@ export default function Home() {
         <HeroHeader />
         <HeroSection />
         <FeaturesSection />
-        <BuiltForDevelopersSection />
-        <TransformationExamplesSection />
-        
+        <BuiltForDevelopersSection />        
         <HowItWorksSection />
         <StorageCompatibilitySection />
-        <TakeControlSection />
         <PricingSection />
         <FAQsSection />
+        <WaitlistSection />
         <FooterSection />
       </div>
     </div>

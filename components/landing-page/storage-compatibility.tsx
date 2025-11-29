@@ -43,7 +43,7 @@ export default function StorageCompatibilitySection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Configure storage in 2 env vars
+              How to configure yours
             </Link>
           </Button>
         </div>
