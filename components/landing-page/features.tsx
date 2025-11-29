@@ -2,7 +2,8 @@
 
 import { ContainerIcon, CpuIcon, ImageIcon } from "lucide-react";
 import Image from "next/image";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
 
 const features = [
   {
@@ -29,9 +30,26 @@ const features = [
 ];
 
 export default function FeaturesSection() {
+  const [activeTab, setActiveTab] = useState(features[0]?.value ?? "explore");
+
+  // Preload all images to avoid layout shift
+  useEffect(() => {
+    features.forEach((feature) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = feature.image;
+      document.head.appendChild(link);
+    });
+  }, []);
+
   return (
     <section className="w-full border-y border-black/10">
-      <Tabs defaultValue={features[0]?.value ?? "explore"} className="w-full">
+      <Tabs 
+        value={activeTab} 
+        onValueChange={setActiveTab}
+        className="w-full"
+      >
         <TabsList className="flex flex-col lg:flex-row h-auto w-full p-0 bg-transparent rounded-none border-0 gap-0">
           {features.map((feature, index) => (
             <TabsTrigger
@@ -59,20 +77,29 @@ export default function FeaturesSection() {
             </TabsTrigger>
           ))}
         </TabsList>
-        <div className="mx-auto max-w-screen-xl">
-          <div className="p-4 sm:p-6 border-t">
-            {features.map((feature) => (
-              <TabsContent key={feature.value} value={feature.value}>
-                <div className="relative w-full overflow-hidden">
+        <div className="w-full border-t">
+          <div className="relative w-full" style={{ aspectRatio: '1920 / 1080', minHeight: '400px' }}>
+            {features.map((feature, index) => (
+              <div
+                key={feature.value}
+                className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${
+                  activeTab === feature.value
+                    ? "opacity-100 pointer-events-auto z-10"
+                    : "opacity-0 pointer-events-none z-0"
+                }`}
+              >
+                <div className="relative w-full h-full overflow-hidden">
                   <Image
                     src={feature.image}
                     alt={feature.title}
-                    width={1230}
-                    height={640}
-                    className="rounded-lg shadow-none w-full h-auto"
+                    fill
+                    priority={index === 0}
+                    loading={index === 0 ? "eager" : "eager"}
+                    className="object-cover"
+                    sizes="100vw"
                   />
                 </div>
-              </TabsContent>
+              </div>
             ))}
           </div>
         </div>

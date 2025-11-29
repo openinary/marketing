@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Openinary | Cloudinary alternative open source",
+  title: "Openinary | Open-source, self-hostable alternative to Cloudinary",
   description:
-    "Openinary is an open source, Dockerized media library that lets you upload, transform, and deliver images and videos from the edge.",
+    "Open-source, self-hostable alternative to Cloudinary. Self-hosted, no vendor lock-in, works with S3/R2/MinIO. Upload, transform, and deliver images and videos from the edge.",
 };
 export default function RootLayout({
   children,

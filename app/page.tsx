@@ -1,10 +1,14 @@
 import Banner from "@/components/landing-page/banner";
+import BuiltForDevelopersSection from "@/components/landing-page/built-for-developers";
 import FAQsSection from "@/components/landing-page/faq";
 import FeaturesSection from "@/components/landing-page/features";
 import FooterSection from "@/components/landing-page/footer";
 import HeroHeader from "@/components/landing-page/header";
 import HeroSection from "@/components/landing-page/hero";
+import HowItWorksSection from "@/components/landing-page/how-it-works";
 import PricingSection from "@/components/landing-page/pricing";
+import StorageCompatibilitySection from "@/components/landing-page/storage-compatibility";
+import WaitlistSection from "@/components/landing-page/waitlist";
 
 export default function Home() {
   return (
@@ -19,8 +23,12 @@ export default function Home() {
         <HeroHeader />
         <HeroSection />
         <FeaturesSection />
+        <BuiltForDevelopersSection />        
+        <HowItWorksSection />
+        <StorageCompatibilitySection />
         <PricingSection />
         <FAQsSection />
+        <WaitlistSection />
         <FooterSection />
       </div>
     </div>
