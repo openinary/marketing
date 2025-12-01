@@ -96,7 +96,7 @@ export default function TransformationExamplesSection() {
         </div>
 
         <div className="flex justify-start">
-          <Button asChild variant="outline">
+          <Button asChild variant="link">
             <Link
               href="https://docs.openinary.dev/transformations"
               target="_blank"

@@ -4,8 +4,8 @@ import Link from "next/link";
 const steps = [
   {
     number: "1",
-    title: "Clone & Run",
-    description: "Get started with a single command",
+    title: "Docker Pull & Run",
+    description: "Get started with two simple commands",
   },
   {
     number: "2",
@@ -54,7 +54,7 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="flex justify-start">
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" variant="link">
             <Link
               href="https://docs.openinary.dev/quickstart"
               target="_blank"

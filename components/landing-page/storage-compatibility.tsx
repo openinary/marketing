@@ -13,7 +13,7 @@ const storageProviders = [
 
 export default function StorageCompatibilitySection() {
   return (
-    <section className="px-6 py-12">
+    <section className="px-6 py-12 border-b">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h2 className="text-3xl font-semibold lg:text-4xl">
@@ -37,7 +37,7 @@ export default function StorageCompatibilitySection() {
         </div>
 
         <div className="flex justify-start">
-          <Button asChild size="lg" variant="outline">
+          <Button asChild size="lg" variant="link">
             <Link
               href="https://docs.openinary.dev/configuration"
               target="_blank"

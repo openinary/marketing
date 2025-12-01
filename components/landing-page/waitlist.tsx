@@ -38,19 +38,21 @@ export default function WaitlistSection() {
   };
 
   return (
-    <section className="px-6 py-8 border-b scroll-mt-[100px]" id="waitlist">
-      <div>
-        <h2 className="text-left text-3xl font-semibold lg:text-4xl mb-4">
-          Join the Waitlist
-        </h2>
-        <p className="text-muted-foreground max-w-[480px] mb-8 leading-relaxed">
-          Be the first to know when our cloud platform is available. Get updates on new features and early access.
-        </p>
+    <section className="px-6 py-24 border-b scroll-mt-[100px]" id="waitlist">
+      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-8">
+        <div className="flex-1">
+          <h2 className="text-left text-3xl font-semibold lg:text-4xl mb-4">
+            Join the Waitlist
+          </h2>
+          <p className="text-muted-foreground max-w-[480px] leading-relaxed">
+            Be the first to know when our cloud platform is available. Get updates on new features and early access.
+          </p>
+        </div>
         
-        <div className="flex flex-col gap-2" id="waitlist">          
-          <form action={handleSubmit} className="flex flex-col gap-2 mt-2">
+        <div className="flex-shrink-0 md:mt-0">
+          <form action={handleSubmit} className="flex flex-col gap-2">
             <div className="flex flex-col gap-1">
-              <label htmlFor="email" className="text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="text-md font-medium text-gray-700">
                 Email address
               </label>
               <div className="flex gap-1">
@@ -59,13 +61,13 @@ export default function WaitlistSection() {
                   id="email"
                   name="email"
                   placeholder="your.email@example.com"
-                  className="h-8 w-56 text-sm"
+                  className="h-10 md:w-[300px] w-full text-sm"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   disabled={isPending}
                 />
-                <Button type="submit" size="sm" disabled={isPending}>
+                <Button className="h-10" type="submit" size="sm" disabled={isPending}>
                   {isPending ? "Joining..." : "Join the waitlist"}
                 </Button>
               </div>

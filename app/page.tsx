@@ -8,6 +8,7 @@ import HeroSection from "@/components/landing-page/hero";
 import HowItWorksSection from "@/components/landing-page/how-it-works";
 import PricingSection from "@/components/landing-page/pricing";
 import StorageCompatibilitySection from "@/components/landing-page/storage-compatibility";
+import TransformationExamplesSection from "@/components/landing-page/transformation-examples";
 import WaitlistSection from "@/components/landing-page/waitlist";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
         <BuiltForDevelopersSection />        
         <HowItWorksSection />
         <StorageCompatibilitySection />
+        {/* <TransformationExamplesSection /> */}
         <PricingSection />
         <FAQsSection />
         <WaitlistSection />
