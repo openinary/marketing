@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,10 @@ export default function RootLayout({
         {logsnagToken && (
           <LogSnagProvider token={logsnagToken} project={logsnagProject} />
         )}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="ashUvyku0OnE3zrKobkIHg"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
