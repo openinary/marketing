@@ -9,16 +9,16 @@ const examples = [
   {
     title: "Image resize and format",
     description: "Resize and convert to WebP format",
-    url: "https://your-instance.com/image/upload/w_800,h_600,f_webp/sample.jpg",
+    url: "https://your-instance.com/t/w_800,h_600,f_webp/sample.jpg",
     code: `// Resize to 800x600 and convert to WebP
-GET /image/upload/w_800,h_600,f_webp/sample.jpg`,
+GET /t/w_800,h_600,f_webp/sample.jpg`,
   },
   {
     title: "Video thumbnail",
     description: "Extract a frame from video",
-    url: "https://your-instance.com/video/upload/w_400,h_300,so_5/video.mp4",
+    url: "https://your-instance.com/t/w_400,h_300,so_5,f_webp/video.mp4",
     code: `// Extract frame at 5 seconds, resize to 400x300
-GET /video/upload/w_400,h_300,so_5/video.mp4`,
+GET /t/w_400,h_300,so_5,f_webp/video.mp4`,
   },
 ];
 
@@ -32,7 +32,7 @@ export default function TransformationExamplesSection() {
   };
 
   return (
-    <section className="px-6 py-12 border-y">
+    <section className="px-6 py-12 border-b">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h2 className="text-3xl font-semibold lg:text-4xl">
@@ -98,7 +98,7 @@ export default function TransformationExamplesSection() {
         <div className="flex justify-start">
           <Button asChild variant="link">
             <Link
-              href="https://docs.openinary.dev/transformations"
+              href="https://docs.openinary.dev/media-transformations/overview"
               target="_blank"
               rel="noopener noreferrer"
             >

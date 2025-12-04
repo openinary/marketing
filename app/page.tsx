@@ -27,7 +27,7 @@ export default function Home() {
         <BuiltForDevelopersSection />        
         <HowItWorksSection />
         <StorageCompatibilitySection />
-        {/* <TransformationExamplesSection /> */}
+        <TransformationExamplesSection /> 
         <PricingSection />
         <FAQsSection />
         <WaitlistSection />
