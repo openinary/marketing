@@ -54,7 +54,7 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="flex justify-start">
-          <Button asChild size="lg" variant="link">
+          <Button asChild size="lg" variant="link" data-rybbit-event="quickstart_clicked" data-rybbit-prop-location="how-it-works">
             <Link
               href="https://docs.openinary.dev/quickstart"
               target="_blank"

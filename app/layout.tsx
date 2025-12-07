@@ -40,6 +40,13 @@ export default function RootLayout({
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="ashUvyku0OnE3zrKobkIHg"
         />
+       <Script
+          src="https://stats.okura.app/api/script.js"
+          data-site-id="2"
+          data-track-errors="true"
+          data-session-replay="true"
+          defer
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

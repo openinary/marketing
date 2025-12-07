@@ -16,12 +16,12 @@ export default function HeroHeader() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button size="sm" variant="outline">
+            <Button size="sm" variant="outline" data-rybbit-event="docs_clicked" data-rybbit-prop-location="header">
               Docs
             </Button>
           </Link>
           <Link target="_blank" href="https://github.com/openinary/openinary">
-            <Button size="sm">
+            <Button size="sm" data-rybbit-event="github_star_clicked" data-rybbit-prop-location="header">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

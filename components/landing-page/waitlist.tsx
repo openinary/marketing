@@ -67,7 +67,7 @@ export default function WaitlistSection() {
                   required
                   disabled={isPending}
                 />
-                <Button className="h-10" type="submit" size="sm" disabled={isPending}>
+                <Button className="h-10" type="submit" size="sm" disabled={isPending} data-rybbit-event="waitlist_join_clicked">
                   {isPending ? "Joining..." : "Join the waitlist"}
                 </Button>
               </div>

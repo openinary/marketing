@@ -35,12 +35,12 @@ export default function HeroSection() {
         
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-          <Button asChild size="lg" className="w-full sm:w-auto">
+          <Button asChild size="lg" className="w-full sm:w-auto" data-rybbit-event="quickstart_clicked" data-rybbit-prop-location="hero">
             <Link href="https://docs.openinary.dev/quickstart" target="_blank" rel="noopener noreferrer">
               Self-host Openinary in 5 minutes
             </Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+          <Button asChild size="lg" variant="outline" className="w-full sm:w-auto" data-rybbit-event="github_star_clicked" data-rybbit-prop-location="hero">
             <Link href="https://github.com/openinary/openinary" target="_blank" rel="noopener noreferrer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

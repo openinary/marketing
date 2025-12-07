@@ -53,6 +53,7 @@ export default function Banner({
           size="icon"
           className="-mr-2 h-8 w-8 flex-none"
           onClick={handleClose}
+          data-rybbit-event="banner_close_clicked"
         >
           <X className="h-4 w-4" />
         </Button>

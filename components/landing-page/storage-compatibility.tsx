@@ -37,7 +37,7 @@ export default function StorageCompatibilitySection() {
         </div>
 
         <div className="flex justify-start">
-          <Button asChild size="lg" variant="link">
+          <Button asChild size="lg" variant="link" data-rybbit-event="configuration_docs_clicked">
             <Link
               href="https://docs.openinary.dev/configuration"
               target="_blank"

@@ -31,7 +31,7 @@ export default function PricingSection() {
                 </p>
               </div>
 
-              <Button asChild className="w-full">
+              <Button asChild className="w-full" data-rybbit-event="self_host_clicked" data-rybbit-prop-plan="self-hosted">
                 <Link target="_blank" href="https://docs.openinary.dev/quickstart">
                   Self-host with Docker
                 </Link>
@@ -67,7 +67,7 @@ export default function PricingSection() {
                   </p>
                 </div>
 
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="outline" className="w-full" data-rybbit-event="waitlist_join_clicked" data-rybbit-prop-plan="cloud" data-rybbit-prop-location="pricing">
                   <Link href="#waitlist">
                     Join the waitlist
                   </Link>

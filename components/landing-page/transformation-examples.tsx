@@ -64,6 +64,8 @@ export default function TransformationExamplesSection() {
                   <button
                     onClick={() => copyToClipboard(example.url, index)}
                     className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
+                    data-rybbit-event="code_copy_clicked"
+                    data-rybbit-prop-example={example.title.toLowerCase().replace(/\s+/g, '_')}
                   >
                     {copiedIndex === index ? (
                       <>
@@ -96,7 +98,7 @@ export default function TransformationExamplesSection() {
         </div>
 
         <div className="flex justify-start">
-          <Button asChild variant="link">
+          <Button asChild variant="link" data-rybbit-event="transformations_docs_clicked">
             <Link
               href="https://docs.openinary.dev/media-transformations/overview"
               target="_blank"
