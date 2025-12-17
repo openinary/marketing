@@ -41,8 +41,8 @@ export default function RootLayout({
           data-key="ashUvyku0OnE3zrKobkIHg"
         />
        <Script
-          src="https://app.rybbit.io/api/script.js"
-          data-site-id="0b2a52426340"
+          src="https://stats.okura.app/api/script.js"
+          data-site-id="2"
           data-track-errors="true"
           data-session-replay="true"
           defer
