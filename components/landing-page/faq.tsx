@@ -44,7 +44,7 @@ export default function FAQsSection() {
                 What are the costs of self-hosting?
               </h3>
               <p className="text-muted-foreground mt-4">
-                The self-hosted version is completely free under MIT license.
+                The self-hosted version is completely free under AGPL 3.0 license.
                 You only pay for your own infrastructure costs (server, storage).
                 Optionally use S3-compatible storage like Cloudflare R2 for optimized performance.
                 For most projects, this typically costs just a few dollars per month.
@@ -68,7 +68,7 @@ export default function FAQsSection() {
                   No usage limits beyond what you configure
                 </li>
                 <li className="text-muted-foreground">
-                  Transparent, MIT-licensed codebase you can modify/contribute to
+                  Transparent, AGPL 3.0-licensed codebase you can modify/contribute to
                 </li>
               </ul>
             </div>

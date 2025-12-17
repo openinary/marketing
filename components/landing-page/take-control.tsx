@@ -52,7 +52,7 @@ export default function TakeControlSection() {
 
         <div className="mt-4 p-6 border rounded-lg bg-white">
           <p className="text-base font-semibold mb-2">
-            MIT licensed, self-hosted is free
+            AGPL 3.0 licensed, self-hosted is free
           </p>
           <p className="text-sm text-muted-foreground">
             You only pay for your infrastructure costs (server + storage). No hidden fees, no usage limits, full transparency.

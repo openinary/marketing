@@ -45,7 +45,7 @@ export default function PricingSection() {
                   "UI for uploads + previews",
                   "Works with any S3-compatible storage",
                   "Transform images and videos on-the-fly via URL",
-                  "MIT License",
+                  "AGPL 3.0 License",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <Check className="size-3" />
