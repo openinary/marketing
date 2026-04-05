@@ -20,7 +20,7 @@ const painPoints = [
 
 export default function TakeControlSection() {
   return (
-    <section className="px-6 py-12 border-y bg-neutral-50">
+    <section className="bg-muted px-6 py-12 border-y">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <h2 className="text-3xl font-semibold lg:text-4xl">
@@ -35,9 +35,9 @@ export default function TakeControlSection() {
           {painPoints.map((point, index) => (
             <div
               key={index}
-              className="flex flex-col gap-3 p-6 border rounded-lg bg-white"
+              className="bg-card flex flex-col gap-3 p-6 border rounded-lg"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg border bg-neutral-50">
+              <div className="bg-muted flex h-10 w-10 items-center justify-center rounded-lg border">
                 {point.icon}
               </div>
               <div className="flex flex-col gap-1">
@@ -50,7 +50,7 @@ export default function TakeControlSection() {
           ))}
         </div>
 
-        <div className="mt-4 p-6 border rounded-lg bg-white">
+        <div className="bg-card mt-4 p-6 border rounded-lg">
           <p className="text-base font-semibold mb-2">
             AGPL 3.0 licensed, self-hosted is free
           </p>
@@ -62,4 +62,3 @@ export default function TakeControlSection() {
     </section>
   );
 }
-

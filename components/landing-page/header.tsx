@@ -4,7 +4,7 @@ import Logo from "@/components/logo";
 
 export default function HeroHeader() {
   return (
-    <header className="sticky top-0 z-50 py-4 border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 border-b py-4 backdrop-blur">
       <div className="flex items-center justify-between px-4">
         <Link href="/">
           <Logo />

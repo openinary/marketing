@@ -42,7 +42,7 @@ export default function BuiltForDevelopersSection() {
               key={index}
               className="flex flex-col gap-3 p-4 border rounded-lg"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg border bg-neutral-50">
+              <div className="bg-muted flex h-10 w-10 items-center justify-center rounded-lg border">
                 {feature.icon}
               </div>
               <div className="flex flex-col gap-1">
@@ -58,4 +58,3 @@ export default function BuiltForDevelopersSection() {
     </section>
   );
 }
-

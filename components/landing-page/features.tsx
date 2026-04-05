@@ -44,7 +44,7 @@ export default function FeaturesSection() {
   }, []);
 
   return (
-    <section className="w-full border-y border-black/10">
+    <section className="w-full border-y">
       <Tabs 
         value={activeTab} 
         onValueChange={setActiveTab}
@@ -55,21 +55,21 @@ export default function FeaturesSection() {
             <TabsTrigger
               key={feature.value}
               value={feature.value}
-              className={`flex flex-1 h-auto min-h-[80px] lg:min-h-[100px] justify-start rounded-none border-0 p-4 lg:p-6 text-left bg-neutral-50 data-[state=active]:bg-white shadow-none transition-colors w-full ${
+              className={`bg-muted data-[state=active]:bg-card flex h-auto min-h-[80px] w-full flex-1 justify-start rounded-none border-0 p-4 text-left shadow-none transition-colors lg:min-h-[100px] lg:p-6 ${
                 index < features.length - 1
-                  ? "border-b lg:border-b-0 lg:border-r border-black/10"
+                  ? "border-border border-b lg:border-r lg:border-b-0"
                   : ""
               }`}
             >
               <div className="flex w-full flex-row items-center gap-3">
-                <div className="flex h-8 w-8 lg:h-10 lg:w-10 flex-shrink-0 items-center justify-center rounded-lg border border-black/10 shadow-none">
+                <div className="border-border flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border shadow-none lg:h-10 lg:w-10">
                   {feature.icon}
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-sm lg:text-base font-medium leading-tight mb-1 break-words">
                     {feature.title}
                   </h3>
-                  <p className="text-sm lg:text-sm font-normal text-gray-500 leading-relaxed break-words">
+                  <p className="text-muted-foreground text-sm font-normal leading-relaxed break-words lg:text-sm">
                     {feature.description}
                   </p>
                 </div>

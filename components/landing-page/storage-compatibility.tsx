@@ -20,7 +20,8 @@ export default function StorageCompatibilitySection() {
             Works with your storage
           </h2>
           <p className="text-muted-foreground max-w-[600px]">
-            Use your existing S3-compatible storage infrastructure. No need to migrate or change providers.
+            Use your existing S3-compatible storage infrastructure. No need to
+            migrate or change providers.
           </p>
         </div>
 
@@ -37,9 +38,14 @@ export default function StorageCompatibilitySection() {
         </div>
 
         <div className="flex justify-start">
-          <Button asChild size="lg" variant="link" data-rybbit-event="configuration_docs_clicked">
+          <Button
+            asChild
+            size="lg"
+            variant="link"
+            data-rybbit-event="configuration_docs_clicked"
+          >
             <Link
-              href="https://docs.openinary.dev/configuration"
+              href="https://docs.openinary.dev/configuration/storage"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,5 +57,3 @@ export default function StorageCompatibilitySection() {
     </section>
   );
 }
-
-

@@ -19,6 +19,7 @@
     "canvas-confetti": "^1.9.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.35.1",
     "lucide-react": "^0.536.0",
     "motion": "^12.23.26",
     "next": "15.4.8",
@@ -26,7 +27,8 @@
     "react": "19.1.2",
     "react-dom": "19.1.2",
     "sonner": "^2.0.7",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "web-haptics": "^0.0.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -38,6 +38,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      framer-motion:
+        specifier: ^12.35.1
+        version: 12.35.1(react-dom@19.1.2(react@19.1.2))(react@19.1.2)
       lucide-react:
         specifier: ^0.536.0
         version: 0.536.0(react@19.1.2)
@@ -62,6 +65,9 @@ importers:
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
+      web-haptics:
+        specifier: ^0.0.6
+        version: 0.0.6(react-dom@19.1.2(react@19.1.2))(react@19.1.2)
     devDependencies:
       '@eslint/eslintrc':
         specifier: ^3
@@ -1350,8 +1356,8 @@ packages:
     resolution: {integrity: sha512-dKx12eRCVIzqCxFGplyFKJMPvLEWgmNtUrpTiJIR5u97zEhRG8ySrtboPHZXx7daLxQVrl643cTzbab2tkQjxg==}
     engines: {node: '>= 0.4'}
 
-  framer-motion@12.23.26:
-    resolution: {integrity: sha512-cPcIhgR42xBn1Uj+PzOyheMtZ73H927+uWPDVhUMqxy8UHt6Okavb6xIz9J/phFUHUj0OncR6UvMfJTXoc/LKA==}
+  framer-motion@12.35.1:
+    resolution: {integrity: sha512-rL8cLrjYZNShZqKV3U0Qj6Y5WDiZXYEM5giiTLfEqsIZxtspzMDCkKmrO5po76jWfvOg04+Vk+sfBvTD0iMmLw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -1738,11 +1744,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  motion-dom@12.23.23:
-    resolution: {integrity: sha512-n5yolOs0TQQBRUFImrRfs/+6X4p3Q4n1dUEqt/H58Vx7OW6RF+foWEgmTVDhIWJIMXOuNNL0apKH2S16en9eiA==}
+  motion-dom@12.35.1:
+    resolution: {integrity: sha512-7n6r7TtNOsH2UFSAXzTkfzOeO5616v9B178qBIjmu/WgEyJK0uqwytCEhwKBTuM/HJA40ptAw7hLFpxtPAMRZQ==}
 
-  motion-utils@12.23.6:
-    resolution: {integrity: sha512-eAWoPgr4eFEOFfg2WjIsMoqJTW6Z8MTUCgn/GZ3VRpClWBdnbjryiA3ZSNLyxCTmCQx4RmYX6jX1iWHbenUPNQ==}
+  motion-utils@12.29.2:
+    resolution: {integrity: sha512-G3kc34H2cX2gI63RqU+cZq+zWRRPSsNIOjpdl9TN4AQwC4sgwYPl/Q/Obf/d53nOm569T0fYK+tcoSV50BWx8A==}
 
   motion@12.23.26:
     resolution: {integrity: sha512-Ll8XhVxY8LXMVYTCfme27WH2GjBrCIzY4+ndr5QKxsK+YwCtOi2B/oBi5jcIbik5doXuWT/4KKDOVAZJkeY5VQ==}
@@ -2165,6 +2171,23 @@ packages:
   uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
     hasBin: true
+
+  web-haptics@0.0.6:
+    resolution: {integrity: sha512-eCzcf1LDi20+Fr0x9V3OkX92k0gxEQXaHajmhXHitsnk6SxPeshv8TBtBRqxyst8HI1uf2FyFVE7QS3jo1gkrw==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+      svelte: '>=4'
+      vue: '>=3'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
 
   which-boxed-primitive@1.1.1:
     resolution: {integrity: sha512-TbX3mj8n0odCBFVlY8AxkqcHASw3L60jIuF8jFP78az3C2YhmGvqbHBpAjTRH2/xqYunrJ9g1jSyjCjpoWzIAA==}
@@ -3510,10 +3533,10 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
 
-  framer-motion@12.23.26(react-dom@19.1.2(react@19.1.2))(react@19.1.2):
+  framer-motion@12.35.1(react-dom@19.1.2(react@19.1.2))(react@19.1.2):
     dependencies:
-      motion-dom: 12.23.23
-      motion-utils: 12.23.6
+      motion-dom: 12.35.1
+      motion-utils: 12.29.2
       tslib: 2.8.1
     optionalDependencies:
       react: 19.1.2
@@ -3877,15 +3900,15 @@ snapshots:
 
   mkdirp@3.0.1: {}
 
-  motion-dom@12.23.23:
+  motion-dom@12.35.1:
     dependencies:
-      motion-utils: 12.23.6
+      motion-utils: 12.29.2
 
-  motion-utils@12.23.6: {}
+  motion-utils@12.29.2: {}
 
   motion@12.23.26(react-dom@19.1.2(react@19.1.2))(react@19.1.2):
     dependencies:
-      framer-motion: 12.23.26(react-dom@19.1.2(react@19.1.2))(react@19.1.2)
+      framer-motion: 12.35.1(react-dom@19.1.2(react@19.1.2))(react@19.1.2)
       tslib: 2.8.1
     optionalDependencies:
       react: 19.1.2
@@ -4404,6 +4427,11 @@ snapshots:
       punycode: 2.3.1
 
   uuid@10.0.0: {}
+
+  web-haptics@0.0.6(react-dom@19.1.2(react@19.1.2))(react@19.1.2):
+    optionalDependencies:
+      react: 19.1.2
+      react-dom: 19.1.2(react@19.1.2)
 
   which-boxed-primitive@1.1.1:
     dependencies:

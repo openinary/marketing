@@ -4,7 +4,7 @@ import FAQsSection from "@/components/landing-page/faq";
 import FeaturesSection from "@/components/landing-page/features";
 import FooterSection from "@/components/landing-page/footer";
 import HeroHeader from "@/components/landing-page/header";
-import HeroSection from "@/components/landing-page/hero";
+import { HeroSection } from "@/components/blocks/hero-section-2";
 import HowItWorksSection from "@/components/landing-page/how-it-works";
 import PricingSection from "@/components/landing-page/pricing";
 import StorageCompatibilitySection from "@/components/landing-page/storage-compatibility";
@@ -13,7 +13,7 @@ import WaitlistSection from "@/components/landing-page/waitlist";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       <div className="relative mx-auto max-w-screen-xl border-x">
         <Banner
           title="The project is under active development."
@@ -23,11 +23,10 @@ export default function Home() {
         />
         <HeroHeader />
         <HeroSection />
-        <FeaturesSection />
-        <BuiltForDevelopersSection />        
+        <BuiltForDevelopersSection />
         <HowItWorksSection />
         <StorageCompatibilitySection />
-        <TransformationExamplesSection /> 
+        <TransformationExamplesSection />
         <PricingSection />
         <FAQsSection />
         <WaitlistSection />

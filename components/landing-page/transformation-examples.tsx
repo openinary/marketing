@@ -80,7 +80,7 @@ export default function TransformationExamplesSection() {
                     )}
                   </button>
                 </div>
-                <div className="p-3 bg-neutral-50 rounded border font-mono text-xs overflow-x-auto">
+                <div className="bg-muted rounded border p-3 font-mono text-xs overflow-x-auto">
                   <code>{example.url}</code>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function TransformationExamplesSection() {
                 <span className="text-xs font-medium text-muted-foreground">
                   Code example
                 </span>
-                <div className="p-3 bg-neutral-50 rounded border font-mono text-xs overflow-x-auto">
+                <div className="bg-muted rounded border p-3 font-mono text-xs overflow-x-auto">
                   <pre className="whitespace-pre-wrap">{example.code}</pre>
                 </div>
               </div>
@@ -112,4 +112,3 @@ export default function TransformationExamplesSection() {
     </section>
   );
 }
-

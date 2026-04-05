@@ -56,7 +56,7 @@ export default function PricingSection() {
             </div>
           </div>
 
-          <div className="dark:bg-muted rounded-(--radius) border p-6 shadow-lg shadow-gray-950/5 md:col-span-3 lg:p-10 dark:[--color-muted:var(--color-zinc-900)]">
+          <div className="bg-card rounded-(--radius) border p-6 shadow-lg shadow-[color:oklch(var(--foreground)/0.12)] md:col-span-3 lg:p-10">
             <div className="grid gap-6 sm:grid-cols-2">
               <div className="space-y-4">
                 <div>

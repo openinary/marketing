@@ -31,7 +31,7 @@ export default function RootLayout({
   const logsnagProject = process.env.NEXT_PUBLIC_LOGSNAG_PROJECT || "openinary";
   
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {logsnagToken && (
           <LogSnagProvider token={logsnagToken} project={logsnagProject} />
@@ -53,9 +53,10 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
-          forcedTheme="light"
-          enableSystem={false}
+          defaultTheme="system"
+          storageKey="openinary-theme"
+          enableSystem
+          enableColorScheme
           disableTransitionOnChange
         >
           {children}

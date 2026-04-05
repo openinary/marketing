@@ -43,7 +43,7 @@ export default function GitHubStarsAnimation({
   maxAvatars = AVATAR_COUNT,
 }: GitHubStarsAnimationProps) {
   const [stargazers, setStargazers] = useState<Stargazer[]>(
-    providedStargazers || []
+    providedStargazers || [],
   );
   const [starCount, setStarCount] = useState(providedStarCount || 0);
   const [displayCount, setDisplayCount] = useState(0);
@@ -73,7 +73,7 @@ export default function GitHubStarsAnimation({
         // Try to fetch from custom API endpoint first
         if (apiEndpoint) {
           const response = await fetch(
-            `${apiEndpoint}?owner=${owner}&repo=${repo}`
+            `${apiEndpoint}?owner=${owner}&repo=${repo}`,
           );
           if (response.ok) {
             const data = await response.json();
@@ -99,7 +99,7 @@ export default function GitHubStarsAnimation({
         try {
           const repoResponse = await fetch(
             `https://api.github.com/repos/${owner}/${repo}`,
-            { headers }
+            { headers },
           );
 
           if (repoResponse.ok) {
@@ -116,13 +116,11 @@ export default function GitHubStarsAnimation({
           // Calculate which page contains the last stargazers
           // GitHub API returns max 100 per page, so we fetch the last page
           const perPage = 100;
-          const lastPage = totalStars > 0 
-            ? Math.ceil(totalStars / perPage) 
-            : 1;
-          
+          const lastPage = totalStars > 0 ? Math.ceil(totalStars / perPage) : 1;
+
           const stargazersResponse = await fetch(
             `https://api.github.com/repos/${owner}/${repo}/stargazers?per_page=${perPage}&page=${lastPage}`,
-            { headers }
+            { headers },
           );
 
           if (stargazersResponse.ok) {
@@ -188,8 +186,8 @@ export default function GitHubStarsAnimation({
       <div
         className={cn("flex items-center gap-3 text-foreground/60", className)}
       >
-        <div className="h-10 w-10 animate-pulse rounded-full bg-foreground/20" />
-        <div className="h-6 w-20 animate-pulse rounded bg-foreground/20" />
+        <div className="h-10 w-10 animate-pulse rounded-0 bg-foreground/20" />
+        <div className="h-6 w-20 animate-pulse rounded-0 bg-foreground/20" />
       </div>
     );
   }
@@ -199,6 +197,8 @@ export default function GitHubStarsAnimation({
   }
 
   const visibleAvatars = stargazers;
+
+  const repoUrl = `https://github.com/${owner}/${repo}`;
 
   return (
     <div className={cn("flex items-center gap-3", className)}>
@@ -212,12 +212,12 @@ export default function GitHubStarsAnimation({
                 scale: 1,
                 x: 0,
               }}
-              aria-label={`${stargazer.login}'s GitHub profile`}
+              aria-label={`View ${owner}/${repo} on GitHub`}
               className={cn(
                 "relative z-10 h-10 w-10 overflow-hidden rounded-full border-2 border-background bg-background transition-transform hover:z-20 hover:scale-110",
-                avatarClassName
+                avatarClassName,
               )}
-              href={stargazer.html_url}
+              href={repoUrl}
               initial={{
                 opacity: 0,
                 scale: 0.8,
@@ -249,7 +249,7 @@ export default function GitHubStarsAnimation({
 
       {/* Star count */}
       <motion.a
-        href={`https://github.com/${owner}/${repo}`}
+        href={repoUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Star ${owner}/${repo} on GitHub`}
@@ -257,7 +257,10 @@ export default function GitHubStarsAnimation({
           opacity: 1,
           scale: 1,
         }}
-        className={cn("flex items-center gap-1.5 font-medium cursor-pointer", countClassName)}
+        className={cn(
+          "flex items-center gap-1.5 font-medium cursor-pointer",
+          countClassName,
+        )}
         initial={{
           opacity: 0,
           scale: 0.9,
@@ -285,7 +288,9 @@ export default function GitHubStarsAnimation({
           {(isHovered ? displayCount + 1 : displayCount).toLocaleString()}
         </motion.span>
         <span className="text-foreground/70 text-sm">
-          {(isHovered ? displayCount + 1 : displayCount) === 1 ? "star" : "stars"}
+          {(isHovered ? displayCount + 1 : displayCount) === 1
+            ? "star"
+            : "stars"}
         </span>
       </motion.a>
 
@@ -303,4 +308,3 @@ export default function GitHubStarsAnimation({
     </div>
   );
 }
-

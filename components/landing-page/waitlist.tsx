@@ -52,7 +52,7 @@ export default function WaitlistSection() {
         <div className="flex-shrink-0 md:mt-0">
           <form action={handleSubmit} className="flex flex-col gap-2">
             <div className="flex flex-col gap-1">
-              <label htmlFor="email" className="text-md font-medium text-gray-700">
+              <label htmlFor="email" className="text-md font-medium text-foreground">
                 Email address
               </label>
               <div className="flex gap-1">
@@ -78,4 +78,3 @@ export default function WaitlistSection() {
     </section>
   );
 }
-
