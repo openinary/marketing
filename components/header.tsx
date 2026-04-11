@@ -1,6 +1,10 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Logo from "@/components/logo";
+
+export const navLinks = [
+  { label: "Docs", href: "https://docs.openinary.dev/" },
+];
 import { useScroll } from "@/hooks/use-scroll";
 import { useGitHubStars } from "@/hooks/use-github-stars";
 import { Button } from "@/components/ui/button";
