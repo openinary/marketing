@@ -41,7 +41,7 @@ interface GradientWaveTextProps {
 
 export function GradientWaveText({
   children,
-  align = "left",
+  align = "center",
   className,
 
   speed = 1,

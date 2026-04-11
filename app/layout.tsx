@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { LogSnagProvider } from '@logsnag/next';
+import { LogSnagProvider } from "@logsnag/next";
 import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/index.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   const logsnagToken = process.env.NEXT_PUBLIC_LOGSNAG_TOKEN;
   const logsnagProject = process.env.NEXT_PUBLIC_LOGSNAG_PROJECT || "openinary";
-  
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -40,7 +40,7 @@ export default function RootLayout({
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="ashUvyku0OnE3zrKobkIHg"
         />
-       <Script
+        <Script
           src="https://stats.okura.app/api/script.js"
           data-site-id="2"
           data-track-errors="true"

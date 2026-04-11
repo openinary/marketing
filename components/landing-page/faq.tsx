@@ -1,15 +1,16 @@
 import Link from "next/link";
+import { FullWidthDivider } from "../ui/full-width-divider";
 
 export default function FAQsSection() {
   return (
-    <section className="px-6 py-8 border-b">
+    <section className="px-6 py-10 md:py-20 relative">
       <div>
         <div className="grid gap-y-12 px-2 lg:[grid-template-columns:1fr_auto]">
           <div className="lg:text-left lg:sticky lg:top-[100px] lg:self-start">
-            <h2 className="text-left text-3xl font-semibold lg:text-4xl mb-4">
+            <h2 className="text-3xl font-semibold tracking-tight lg:text-4xl mb-4">
               Frequently <br className="hidden lg:block" /> Asked Questions
             </h2>
-            <p className="text-muted-foreground max-w-[480px] leading-relaxed">
+            <p className="text-muted-foreground max-w-[600px] leading-relaxed">
               Everything you need to know about deploying and using Openinary.
             </p>
           </div>
@@ -20,8 +21,9 @@ export default function FAQsSection() {
                 How do I deploy Openinary with Docker?
               </h3>
               <p className="text-muted-foreground mt-4">
-                Openinary is fully Dockerized and can be deployed on any infrastructure.
-                No external dependencies required - it works with any S3-compatible storage.
+                Openinary is fully Dockerized and can be deployed on any
+                infrastructure. No external dependencies required - it works
+                with any S3-compatible storage.
               </p>
 
               <ol className="list-outside list-decimal space-y-2 pl-4">
@@ -29,13 +31,20 @@ export default function FAQsSection() {
                   Clone the repository and configure environment variables.
                 </li>
                 <li className="text-muted-foreground mt-4">
-                  Run docker-compose up or deploy to your preferred container platform.
+                  Run docker-compose up or deploy to your preferred container
+                  platform.
                 </li>
                 <li className="text-muted-foreground mt-4">
-                  Configure S3-compatible storage (like Cloudflare R2) - detailed instructions in our{" "}
-                  <Link target="_blank" className="underline" href="https://docs.openinary.dev/configuration">
+                  Configure S3-compatible storage (like Cloudflare R2) -
+                  detailed instructions in our{" "}
+                  <Link
+                    target="_blank"
+                    className="underline"
+                    href="https://docs.openinary.dev/configuration"
+                  >
                     documentation
-                  </Link>.
+                  </Link>
+                  .
                 </li>
               </ol>
             </div>
@@ -44,10 +53,11 @@ export default function FAQsSection() {
                 What are the costs of self-hosting?
               </h3>
               <p className="text-muted-foreground mt-4">
-                The self-hosted version is completely free under AGPL 3.0 license.
-                You only pay for your own infrastructure costs (server, storage).
-                Optionally use S3-compatible storage like Cloudflare R2 for optimized performance.
-                For most projects, this typically costs just a few dollars per month.
+                The self-hosted version is completely free under AGPL 3.0
+                license. You only pay for your own infrastructure costs (server,
+                storage). Optionally use S3-compatible storage like Cloudflare
+                R2 for optimized performance. For most projects, this typically
+                costs just a few dollars per month.
               </p>
             </div>
             <div className="py-6">
@@ -68,7 +78,8 @@ export default function FAQsSection() {
                   No usage limits beyond what you configure
                 </li>
                 <li className="text-muted-foreground">
-                  Transparent, AGPL 3.0-licensed codebase you can modify/contribute to
+                  Transparent, AGPL 3.0-licensed codebase you can
+                  modify/contribute to
                 </li>
               </ul>
             </div>
@@ -77,10 +88,17 @@ export default function FAQsSection() {
                 When will the Cloud version be available?
               </h3>
               <p className="text-muted-foreground mt-4">
-                We&apos;re currently focused on adding features to the open source version.
-                The managed Cloud offering is planned for the future, but we
-                don&apos;t have a specific timeline yet. <Link target="_blank" className="underline" href="https://github.com/openinary/openinary/commits/main/">Follow our GitHub repository
-                </Link> for updates on development progress.
+                We&apos;re currently focused on adding features to the open
+                source version. The managed Cloud offering is planned for the
+                future, but we don&apos;t have a specific timeline yet.{" "}
+                <Link
+                  target="_blank"
+                  className="underline"
+                  href="https://github.com/openinary/openinary/commits/main/"
+                >
+                  Follow our GitHub repository
+                </Link>{" "}
+                for updates on development progress.
               </p>
             </div>
             <div className="py-6">
@@ -88,10 +106,11 @@ export default function FAQsSection() {
                 What image and video formats are supported?
               </h3>
               <p className="text-muted-foreground mt-4">
-                Openinary supports common web formats (JPEG, PNG, WebP) for images
-                and video processing via FFmpeg. On-the-fly transformations include
-                resizing, cropping, format conversion, quality optimization, and video
-                transcoding. All transformations happen via API for maximum flexibility.
+                Openinary supports common web formats (JPEG, PNG, WebP) for
+                images and video processing via FFmpeg. On-the-fly
+                transformations include resizing, cropping, format conversion,
+                quality optimization, and video transcoding. All transformations
+                happen via API for maximum flexibility.
               </p>
             </div>
           </div>

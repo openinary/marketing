@@ -91,12 +91,14 @@ export default function FooterSection({
               © {new Date().getFullYear()} {companyName}, {copyrightText}
             </span>
             <p className="text-xs text-muted-foreground max-w-[500px]">
-              Open-source, self-hostable alternative to Cloudinary
+              Built by florianheysen
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex flex-col gap-2">
-              <span className="text-xs font-semibold text-muted-foreground">Resources</span>
+              <span className="text-xs font-semibold text-muted-foreground">
+                Resources
+              </span>
               <div className="flex flex-col gap-1">
                 <Link
                   href="/"

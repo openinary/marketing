@@ -40,6 +40,8 @@ export default function Banner({
                 href={linkUrl}
                 className="hover:text-foreground underline underline-offset-2"
                 target="_blank"
+                data-rybbit-event="banner_link_clicked"
+                data-rybbit-prop-location="banner"
               >
                 {linkText}
               </a>

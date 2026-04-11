@@ -11,6 +11,13 @@ const COUNTDOWN_DURATION = 2000;
 const AVATAR_COUNT = 5;
 const STAGGER_DELAY = 0.05;
 
+// Module-level cache to persist across navigations
+const dataCache = new Map<
+  string,
+  { starCount: number; stargazers: Stargazer[] }
+>();
+let countdownHasPlayed = false;
+
 export type Stargazer = {
   login: string;
   avatar_url: string;
@@ -42,12 +49,18 @@ export default function GitHubStarsAnimation({
   showAvatars = true,
   maxAvatars = AVATAR_COUNT,
 }: GitHubStarsAnimationProps) {
+  const cacheKey = `${owner}/${repo}`;
+  const cached = dataCache.get(cacheKey);
   const [stargazers, setStargazers] = useState<Stargazer[]>(
-    providedStargazers || [],
+    cached?.stargazers || providedStargazers || [],
   );
-  const [starCount, setStarCount] = useState(providedStarCount || 0);
-  const [displayCount, setDisplayCount] = useState(0);
-  const [isLoading, setIsLoading] = useState(!providedStargazers);
+  const [starCount, setStarCount] = useState(
+    cached?.starCount ?? providedStarCount ?? 0,
+  );
+  const [displayCount, setDisplayCount] = useState(
+    countdownHasPlayed ? (cached?.starCount ?? providedStarCount ?? 0) : 0,
+  );
+  const [isLoading, setIsLoading] = useState(!providedStargazers && !cached);
   const [error, setError] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -62,6 +75,10 @@ export default function GitHubStarsAnimation({
       setStargazers(providedStargazers.slice(-maxAvatars).reverse());
       setStarCount(providedStarCount);
       setIsLoading(false);
+      return;
+    }
+
+    if (cached) {
       return;
     }
 
@@ -147,11 +164,21 @@ export default function GitHubStarsAnimation({
     maxAvatars,
     providedStargazers,
     providedStarCount,
+    cached,
   ]);
 
   // Animate countdown
   useEffect(() => {
     if (starCount === 0) {
+      return;
+    }
+
+    // Cache data for future mounts
+    dataCache.set(cacheKey, { starCount, stargazers });
+
+    if (countdownHasPlayed) {
+      setDisplayCount(starCount);
+      countSpring.set(starCount);
       return;
     }
 
@@ -175,11 +202,12 @@ export default function GitHubStarsAnimation({
       } else {
         setDisplayCount(endValue);
         countSpring.set(endValue);
+        countdownHasPlayed = true;
       }
     };
 
     animate();
-  }, [starCount, countSpring]);
+  }, [starCount, countSpring, cacheKey, stargazers]);
 
   if (isLoading) {
     return (

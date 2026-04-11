@@ -61,7 +61,9 @@ export default function PricingSection() {
               <div className="space-y-4">
                 <div>
                   <h2 className="font-medium">Cloud</h2>
-                  <span className="my-3 block text-2xl font-semibold">TBD</span>
+                  <span className="my-3 block text-2xl font-semibold">
+                    $29/month
+                  </span>
                   <p className="text-muted-foreground text-sm">
                     We handle the hosting
                   </p>

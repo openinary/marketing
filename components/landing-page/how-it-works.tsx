@@ -21,14 +21,15 @@ const steps = [
 
 export default function HowItWorksSection() {
   return (
-    <section className="px-6 py-12 border-y">
+    <section className="px-6 py-16 md:py-20 border-y">
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-4">
-          <h2 className="text-3xl font-semibold lg:text-4xl">
+        <div className="flex flex-col gap-4 text-center mx-auto max-w-3xl">
+          <h2 className="text-3xl font-semibold tracking-tight lg:text-4xl mb-4">
             How it works in 3 steps
           </h2>
-          <p className="text-muted-foreground max-w-[600px]">
-            Get up and running with Openinary in minutes. No complex setup required.
+          <p className="text-muted-foreground max-w-[600px] mx-auto leading-relaxed">
+            Get up and running with Openinary in minutes. No complex setup
+            required.
           </p>
         </div>
 
@@ -54,7 +55,13 @@ export default function HowItWorksSection() {
         </div>
 
         <div className="flex justify-start">
-          <Button asChild size="lg" variant="link" data-rybbit-event="quickstart_clicked" data-rybbit-prop-location="how-it-works">
+          <Button
+            asChild
+            size="lg"
+            variant="link"
+            data-rybbit-event="quickstart_clicked"
+            data-rybbit-prop-location="how-it-works"
+          >
             <Link
               href="https://docs.openinary.dev/quickstart"
               target="_blank"
@@ -68,4 +75,3 @@ export default function HowItWorksSection() {
     </section>
   );
 }
-
