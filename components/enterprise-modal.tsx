@@ -24,13 +24,12 @@ import { useActionState, useEffect } from "react";
 import { submitEnterprise } from "@/app/actions/enterprise";
 import { trackEvent } from "@/lib/rybbit";
 
-const initialState = { success: false, error: undefined as string | undefined };
+type FormState = { success: boolean; error?: string };
+const initialState: FormState = { success: false };
 
 export function EnterpriseModal({ trigger }: { trigger: React.ReactNode }) {
-  const [state, formAction, isPending] = useActionState(
-    async (_prev: typeof initialState, formData: FormData) => {
-      return submitEnterprise(formData);
-    },
+  const [state, formAction, isPending] = useActionState<FormState, FormData>(
+    (_prev, formData) => submitEnterprise(formData),
     initialState
   );
 

@@ -15,7 +15,7 @@ export function PricingSection() {
 					Free to self-host. Open source forever.
 				</h2>
 				<p className="text-muted-foreground leading-relaxed">
-					No paywalled features. No vendor lock-in. Deploy on your own infrastructure for free, or let us manage it when you're ready.
+					No paywalled features. No vendor lock-in. Deploy on your own infrastructure for free, or let us manage it when you&apos;re ready.
 				</p>
 			</div>
 			<div className="mx-auto grid w-full max-w-4xl gap-4 px-6 md:grid-cols-3">

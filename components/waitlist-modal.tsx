@@ -15,13 +15,12 @@ import {
 import { submitWaitlist } from "@/app/actions/waitlist";
 import { trackEvent } from "@/lib/rybbit";
 
-const initialState = { success: false, error: undefined as string | undefined };
+type FormState = { success: boolean; error?: string };
+const initialState: FormState = { success: false };
 
 export function WaitlistModal({ trigger }: { trigger: React.ReactNode }) {
-  const [state, formAction, isPending] = useActionState(
-    async (_prev: typeof initialState, formData: FormData) => {
-      return submitWaitlist(formData);
-    },
+  const [state, formAction, isPending] = useActionState<FormState, FormData>(
+    (_prev, formData) => submitWaitlist(formData),
     initialState
   );
 

@@ -96,7 +96,7 @@ export function DocsSection() {
             <div>
               <p className="text-sm font-medium">Something missing?</p>
               <p className="text-muted-foreground text-sm">
-                Can't find what you're looking for in the docs.
+                Can&apos;t find what you&apos;re looking for in the docs.
               </p>
             </div>
           </div>
