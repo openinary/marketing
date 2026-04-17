@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:ui.shadcn.com)",
+      "WebFetch(domain:shadcn-ui.efferd.io)",
+      "WebFetch(domain:shadcnui-blocks.vercel.app)",
+      "Bash(pnpm dlx *)",
+      "Bash(pnpm tsc *)",
+      "WebFetch(domain:vercel.com)",
+      "Bash(npx shadcn@latest add dialog --yes)",
+      "Bash(npx shadcn@latest add dialog)",
+      "WebFetch(domain:www.openpolicy.sh)",
+      "Bash(pnpm add *)",
+      "Bash(cat .npmrc)",
+      "Bash(pnpm config *)",
+      "Bash(pnpm exec *)",
+      "Bash(node -e \"const r = require\\('C:/dev/marketing/node_modules/radix-ui'\\); console.log\\(Object.keys\\(r\\).filter\\(k => k.toLowerCase\\(\\).includes\\('select'\\) || k.toLowerCase\\(\\).includes\\('textarea'\\)\\)\\)\")",
+      "WebFetch(domain:stats.okura.app)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.rybbit.io)",
+      "WebFetch(domain:rybbit.com)"
+    ]
+  }
+}

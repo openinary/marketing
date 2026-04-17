@@ -43,6 +43,10 @@ export function Integrations() {
               <Check className="size-5 flex-shrink-0 text-green-600" />
               <span className="text-sm font-medium">Google Cloud Storage</span>
             </li>
+            <li className="flex items-center gap-2">
+              <Check className="size-5 flex-shrink-0 text-green-600" />
+              <span className="text-sm font-medium">Any S3-Compatible Storage</span>
+            </li>
           </ul>
         </div>
 

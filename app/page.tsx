@@ -7,7 +7,8 @@ import { FeatureSection } from "@/components/feature-section";
 import { PricingSection } from "@/components/pricing-section";
 import { Integrations } from "@/components/integrations";
 import DeveloperSection from "@/components/features-6";
-import WaitlistSection from "@/components/landing-page/waitlist";
+import { DocsSection } from "@/components/docs-section";
+import CTASection from "@/components/landing-page/cta";
 import { SectionReveal } from "@/components/ui/section-reveal";
 
 export default function Home() {
@@ -27,28 +28,23 @@ export default function Home() {
         <SectionReveal delay={0.1}>
           <FeatureSection />
         </SectionReveal>
-        {/* <HowItWorksSection /> */}
         <SectionReveal delay={0.1}>
           <Integrations />
         </SectionReveal>
         <SectionReveal delay={0.1}>
           <DeveloperSection />
         </SectionReveal>
-        {/* <SectionReveal delay={0.1}>
-          <TransformationExamplesSection />
-        </SectionReveal> */}
+        <SectionReveal delay={0.1}>
+          <DocsSection />
+        </SectionReveal>
         <SectionReveal delay={0.1}>
           <PricingSection />
         </SectionReveal>
         <SectionReveal delay={0.1}>
           <FAQsSection />
         </SectionReveal>
-        <SectionReveal delay={0.1}>
-          <WaitlistSection />
-        </SectionReveal>
-        <SectionReveal>
-          <Footer />
-        </SectionReveal>
+        <CTASection />
+        <Footer />
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WaitlistModal } from "@/components/waitlist-modal";
 
 type Params = { slug: string };
 
@@ -125,14 +126,17 @@ export default async function ComparePage({
                   Self-host in 5 minutes
                 </a>
               </Button>
-              <Button
-                variant="outline"
-                asChild
-                data-rybbit-event="view_pricing_clicked"
-                data-rybbit-prop-location="compare_cta"
-              >
-                <Link href="/#pricing">View pricing</Link>
-              </Button>
+              <WaitlistModal
+                trigger={
+                  <Button
+                    variant="outline"
+                    data-rybbit-event="cloud_waitlist_clicked"
+                    data-rybbit-prop-location="compare_cta"
+                  >
+                    Join Cloud Waitlist
+                  </Button>
+                }
+              />
             </div>
           </div>
         </main>

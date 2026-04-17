@@ -103,91 +103,52 @@ export default function CodeBlockIllustration() {
   }, [code, codeBlockConfigs]);
 
   const codes: { [key in CodeBlockType]: string } = {
-    nodejs: `const form = new FormData();
-form.append("files", file);
-form.append("transformations", JSON.stringify([
-  "w_800,h_600,f_webp,q_80",
-  "w_400,c_fill,f_avif,q_70",
-]));
+    nodejs: `// Cloudinary
+// res.cloudinary.com/demo/image/upload/w_800,h_600,f_webp/photo.jpg
 
-const res = await fetch("https://your-instance.com/upload", {
-  method: "POST",
-  headers: { Authorization: \`Bearer \${API_KEY}\` },
-  body: form,
-});`,
-    nextjs: `<Image
-  src="https://your-instance.com/t/w_1200,h_630,c_fill,f_avif,q_85/hero.jpg"
+// Your instance — same syntax
+const url = "https://your-instance.com/t/w_800,h_600,f_webp,q_80/photo.jpg";
+
+const res = await fetch(url);`,
+    nextjs: `// Cloudinary
+// res.cloudinary.com/demo/image/upload/w_1200,h_630,c_fill/hero.jpg
+
+// Your instance — same syntax
+<Image
+  src="https://your-instance.com/t/w_1200,h_630,c_fill,f_avif/hero.jpg"
   alt="Hero"
   width={1200}
   height={630}
-/>
+/>`,
+    remix: `// Cloudinary
+// res.cloudinary.com/demo/image/upload/w_800,h_600,f_webp/photo.jpg
 
-// Upload from a Server Action
-const form = new FormData();
-form.append("files", file);
+// Your instance — same syntax
+const url = "https://your-instance.com/t/w_800,h_600,f_webp,q_80/photo.jpg";
 
-await fetch(\`\${OPENINARY_URL}/upload\`, {
-  method: "POST",
-  headers: { Authorization: \`Bearer \${API_KEY}\` },
-  body: form,
-});`,
-    remix: `export async function action({ request }: ActionFunctionArgs) {
-  const formData = await request.formData();
-  const file = formData.get("file") as File;
+export const loader = () => json({ url });`,
+    python: `# Cloudinary
+# res.cloudinary.com/demo/image/upload/w_800,h_600,f_webp/photo.jpg
 
-  const form = new FormData();
-  form.append("files", file);
-  form.append("transformations", JSON.stringify([
-    "w_800,h_600,f_webp,q_80",
-  ]));
+# Your instance — same syntax
+url = "https://your-instance.com/t/w_800,h_600,f_webp,q_80/photo.jpg"
 
-  const res = await fetch("https://your-instance.com/upload", {
-    method: "POST",
-    headers: { Authorization: \`Bearer \${API_KEY}\` },
-    body: form,
-  });
-  return json(await res.json());
-}`,
-    python: `res = requests.post(
-    "https://your-instance.com/upload",
-    headers={"Authorization": f"Bearer {API_KEY}"},
-    files={"files": ("photo.jpg", f, "image/jpeg")},
-    data={
-        "transformations": '["w_800,h_600,f_webp,q_80"]',
-    },
-)
+res = requests.get(url)`,
+    go: `// Cloudinary
+// res.cloudinary.com/demo/image/upload/w_800,h_600,f_webp/photo.jpg
 
-print(res.json())
+// Your instance — same syntax
+url := "https://your-instance.com/t/w_800,h_600,f_webp,q_80/photo.jpg"
 
-# Transformed image via URL
-# GET /t/w_800,h_600,f_webp/uploads/photo.jpg`,
-    go: `body := &bytes.Buffer{}
-writer := multipart.NewWriter(body)
-part, _ := writer.CreateFormFile("files", "photo.jpg")
-io.Copy(part, file)
-writer.WriteField("transformations",
-\t\`["w_800,h_600,f_webp,q_80"]\`)
-writer.Close()
+resp, _ := http.Get(url)
+defer resp.Body.Close()`,
+    rust: `// Cloudinary
+// res.cloudinary.com/demo/image/upload/w_800,h_600,f_webp/photo.jpg
 
-req, _ := http.NewRequest("POST",
-\t"https://your-instance.com/upload", body)
-req.Header.Set("Authorization", "Bearer "+apiKey)
-req.Header.Set("Content-Type", writer.FormDataContentType())
-resp, _ := http.DefaultClient.Do(req)`,
-    rust: `let file_part = multipart::Part::bytes(bytes)
-    .file_name("photo.jpg")
-    .mime_str("image/jpeg")?;
+// Your instance — same syntax
+let url = "https://your-instance.com/t/w_800,h_600,f_webp,q_80/photo.jpg";
 
-let form = multipart::Form::new()
-    .part("files", file_part)
-    .text("transformations",
-        r#"["w_800,h_600,f_webp,q_80"]"#);
-
-let res = reqwest::Client::new()
-    .post("https://your-instance.com/upload")
-    .bearer_auth(&api_key)
-    .multipart(form)
-    .send().await?;`,
+let res = reqwest::get(url).await?;`,
   };
 
   const currentLang = langMap[code];
@@ -233,7 +194,7 @@ let res = reqwest::Client::new()
           maxHeight={360}
           theme="github-light"
           lineNumbers
-          className="[&_pre]:mask-y-from-85% [&_pre]:h-74 -mx-1 [&_pre]:min-h-[12rem] [&_pre]:rounded-xl [&_pre]:border-none [&_pre]:!bg-transparent"
+          className="[&_pre]:mask-b-from-85% [&_pre]:h-74 -mx-1 [&_pre]:min-h-[12rem] [&_pre]:rounded-xl [&_pre]:border-none [&_pre]:!bg-transparent [&_pre]:pt-4"
         />
       </div>
     </div>

@@ -59,7 +59,7 @@ export function Footer() {
           </div>
         </div>
 
-        <nav>
+        <nav className="flex items-center justify-between">
           <ul className="flex flex-wrap gap-4 font-medium text-muted-foreground text-sm md:gap-6">
             {navLinks.map((link) => (
               <li key={link.label}>
@@ -77,6 +77,14 @@ export function Footer() {
               </li>
             ))}
           </ul>
+          <Link
+            href="/privacy"
+            className="font-medium text-muted-foreground text-sm hover:text-foreground"
+            data-rybbit-event="nav_link_clicked"
+            data-rybbit-prop-location="footer"
+          >
+            Privacy Policy
+          </Link>
         </nav>
       </div>
 

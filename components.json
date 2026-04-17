@@ -29,6 +29,8 @@
       "headers": {
         "Authorization": "Bearer tlk_ABluOGkoaDpVhHXIgbhdvVIftgFrwqKG"
       }
-    }
+    },
+    "@spell": "https://spell.sh/r/{name}.json",
+    "@openpolicy": "https://www.openpolicy.sh/r/{name}.json"
   }
 }

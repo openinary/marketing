@@ -8,6 +8,7 @@ import Image from "next/image";
 import GradientWaveText from "./gradient-wave-text";
 import { DottedGlowBackground } from "./ui/dotted-glow-background";
 import { FullWidthDivider } from "@/components/ui/full-width-divider";
+import { WaitlistModal } from "@/components/waitlist-modal";
 
 export function HeroSection() {
   return (
@@ -139,18 +140,19 @@ export function HeroSection() {
               <ArrowRightIcon data-icon="inline-end" />
             </Link>
           </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="ghost"
-            className="w-full sm:w-auto"
-            data-rybbit-event="waitlist_clicked"
-            data-rybbit-prop-location="hero"
-          >
-            <Link href="https://openinary.dev#waitlist">
-              Join Cloud waitlist
-            </Link>
-          </Button>
+          <WaitlistModal
+            trigger={
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto"
+                data-rybbit-event="waitlist_clicked"
+                data-rybbit-prop-location="hero"
+              >
+                Join Cloud waitlist
+              </Button>
+            }
+          />
         </div>
       </div>
 
