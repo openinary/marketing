@@ -18,7 +18,8 @@
       "WebFetch(domain:stats.okura.app)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:www.rybbit.io)",
-      "WebFetch(domain:rybbit.com)"
+      "WebFetch(domain:rybbit.com)",
+      "Bash(pnpm install *)"
     ]
   }
 }

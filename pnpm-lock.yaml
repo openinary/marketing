@@ -17,15 +17,6 @@ importers:
       '@logsnag/next':
         specifier: ^1.0.3
         version: 1.0.3(next@15.4.8(react-dom@19.1.2(react@19.1.2))(react@19.1.2))(react-dom@19.1.2(react@19.1.2))(react@19.1.2)
-      '@openpolicy/core':
-        specifier: ^1.0.0
-        version: 1.0.0
-      '@openpolicy/react':
-        specifier: ^1.0.0
-        version: 1.0.0(react-dom@19.1.2(react@19.1.2))(react@19.1.2)
-      '@openpolicy/sdk':
-        specifier: ^1.0.0
-        version: 1.0.0
       '@radix-ui/react-slot':
         specifier: ^1.2.3
         version: 1.2.3(@types/react@19.1.9)(react@19.1.2)
@@ -521,18 +512,6 @@ packages:
   '@nolyfill/is-core-module@1.0.39':
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
-
-  '@openpolicy/core@1.0.0':
-    resolution: {integrity: sha512-nqKQBEyJ5zn5jnUBkqVl+srbAJzQwQdsOIQUnEvNnheOqApIWeK6Pn1yZCo8q3rV5jGH8/f05331x+wrBPhzag==}
-
-  '@openpolicy/react@1.0.0':
-    resolution: {integrity: sha512-pPH5LPZxftojKpntmH19YhzNktGyiJqv2DHWZoOsVPK48WfkYSWjVhy5Wnxj4SvvE6whKO4X6AE1CE3B4dowMw==}
-    peerDependencies:
-      react: '>=19'
-      react-dom: '>=19'
-
-  '@openpolicy/sdk@1.0.0':
-    resolution: {integrity: sha512-9R7re9rjZKtXrLq9XoJDLXlSRZPh9RT5bwiTRY2vb+xvL7aN1vnkGOtttgAH1HYk2C3VbtDZzud7MvvHvQXOiw==}
 
   '@radix-ui/number@1.1.1':
     resolution: {integrity: sha512-MkKCwxlXTgz6CFoJx3pCwn07GKp36+aZyu/u2Ln2VrA5DcdyCZkASEDBTd8x5whTQQL5CiYf4prXKLcgQdv29g==}
@@ -3539,15 +3518,6 @@ snapshots:
       fastq: 1.19.1
 
   '@nolyfill/is-core-module@1.0.39': {}
-
-  '@openpolicy/core@1.0.0': {}
-
-  '@openpolicy/react@1.0.0(react-dom@19.1.2(react@19.1.2))(react@19.1.2)':
-    dependencies:
-      react: 19.1.2
-      react-dom: 19.1.2(react@19.1.2)
-
-  '@openpolicy/sdk@1.0.0': {}
 
   '@radix-ui/number@1.1.1': {}
 
