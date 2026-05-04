@@ -38,7 +38,7 @@ export default function CTASection() {
 
         <div className="flex-shrink-0 flex flex-col sm:flex-row gap-3">
           <Button asChild size="default" data-rybbit-event="self_host_cta_clicked">
-            <Link href="https://docs.Ente.io/self-hosting" target="_blank" rel="noopener noreferrer">
+            <Link href="https://docs.openinary.dev/quickstart" target="_blank" rel="noopener noreferrer">
               Self host in 5 minutes
               <ArrowRightIcon data-icon="inline-end" />
             </Link>
