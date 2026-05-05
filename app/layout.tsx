@@ -41,10 +41,9 @@ export default function RootLayout({
           data-key="ashUvyku0OnE3zrKobkIHg"
         />
         <Script
-          src="https://stats.okura.app/api/script.js"
-          data-site-id="2"
-          data-track-errors="true"
-          data-session-replay="true"
+          id="counterscale-script"
+          data-site-id="openinary-marketing"
+          src="https://counterscale.heysen.workers.dev/tracker.js"
           defer
         />
       </head>
